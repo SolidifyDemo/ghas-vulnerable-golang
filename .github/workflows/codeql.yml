@@ -16,9 +16,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: '37 16 * * 4'
-
+    paths-ignore: 
+      - '.github/*'
+  workflow_dispatch:
+  
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
